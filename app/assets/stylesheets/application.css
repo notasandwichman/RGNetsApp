@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+body{
+    background-color: #cccccc;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+button, .form-button {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+button:hover {
+    background-color: #45a049;
+}
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+.div-width-80{
+    width: 80%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.form {
+    font-size: large;
+}
+.form-title {
+    font-size: x-large;
+}
+.form-group {
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+.form-text {
+    background-color: white;
+}
+.form-signin {
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: x-large;
+    margin: 15px;
+}
+#login-form {
+    margin-top: 15%;
+}
+#login-button {
+    font-size: x-large;
+    margin-top: 10px;
+}

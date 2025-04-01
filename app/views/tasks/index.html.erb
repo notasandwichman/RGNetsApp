@@ -1,0 +1,30 @@
+<div class="div-width-80">
+    <div class="header">
+            <h1>To-Do List</h1>
+
+            <%= button_to "New Task", new_task_path, method: :get if authenticated? %>
+    </div>
+    <ul class="task-list">
+        <% @tasks.each do |task| %>
+            <li>
+                    <h2><%= link_to task.name, task %> - 
+                    <% if task.completed?%>
+                            <span class="completed">Completed
+                            <%= form_with model: task, local: true do |form| %>
+                                    <%= form.check_box :completed, checked: task.completed? %>
+                                    <%= form.submit "Update Task Status" %>
+                            <% end %>
+                            </span>
+                    <% else %>
+                            <span class="not-completed">Not Completed
+                            <%= form_with model: task, local: true do |form| %>
+                                    <%= form.check_box :completed, checked: task.completed? %>
+                                    <%= form.submit "Update Task Status" %>
+                            <% end %>
+                            </span>
+                    <% end %>
+                    </h2>
+            </li>
+        <% end %>
+    </ul>
+</div>

@@ -1,0 +1,20 @@
+<div class="div-width-80">
+    <% cache @task do %>
+            <h1><%= @task.name %> - 
+            <% if @task.completed? %>
+                    <span class="completed">Completed</span>
+            <% else %>
+                    <span class="not-completed">Not Completed</span>
+            <% end %>
+            </h1>
+            <h2> Task Description </h2>
+            <%= @task.description %>
+    <% end %>
+    <div style="display:flex; justify-content:center;">
+        <%= button_to "Back to List", tasks_path, method: :get %>
+        <% if authenticated? %>
+                <%= button_to "Edit", edit_task_path(@task), method: :get %>
+                <%= button_to "Delete", @task, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+        <% end %>
+    </div>
+</div>
