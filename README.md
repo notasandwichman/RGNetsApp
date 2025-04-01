@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my RG Nets Application Project
 
-Things you may want to cover:
+It is a simple To-Do List web-application using Ruby on Rails, and it is my first time ever using Ruby on Rails :p
 
-* Ruby version
+Ruby Version 3.4.2
 
-* System dependencies
+Rails Version 8.0.2
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run with `rails server`

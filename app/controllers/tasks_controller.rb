@@ -44,6 +44,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.expect(task: [:name, :description, :completed])
+    params.expect(task: [ :name, :description, :completed ])
   end
 end
